@@ -32,10 +32,13 @@ class Game:
         # 移動量の調整
         # if self.move_amount > 0.1:
         #     self.move_amount -= 0.01
-        # self.clock.tick(60)
+        
+        self.clock.tick(20)
         self.akaoni2player_vel = [self.player_pos[0] - self.akaoni_pos[0], self.player_pos[1] - self.akaoni_pos[1]]
         
         # あかおにの移動
+        self.akaoni_acc = [random.uniform(-0.5,0.5), random.uniform(-0.5,0.5)]
+        
         self.akaoni_vel[0] += self.akaoni_acc[0]
         self.akaoni_vel[1] += self.akaoni_acc[1]
         
